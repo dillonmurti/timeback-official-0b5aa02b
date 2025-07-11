@@ -48,7 +48,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4" style={{ backgroundColor: '#016b1e' }}>
+    <div className="min-h-screen flex flex-col items-center justify-center px-4" style={{ backgroundColor: '#1abeff' }}>
       <div className="max-w-4xl mx-auto text-center space-y-12">
         {/* Logo */}
         <div className="animate-fade-in">
@@ -62,11 +62,11 @@ const Index = () => {
 
         {/* Main Headline */}
         <div className="space-y-4 animate-fade-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight" style={{ color: '#ffb881' }}>
-            <div style={{ color: '#ffb881' }}>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight" style={{ color: '#0f33bb' }}>
+            <div style={{ color: '#0f33bb' }}>
               Your kid can crush academics
             </div>
-            <div className="mt-2" style={{ color: '#ffb881' }}>
+            <div className="mt-2" style={{ color: '#0f33bb' }}>
               in only 2 hours per day
             </div>
           </h1>
@@ -83,9 +83,9 @@ const Index = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 h-12 text-lg border-2 rounded-xl"
                 style={{ 
-                  borderColor: '#ffb881', 
-                  backgroundColor: '#ffb881', 
-                  color: '#016b1e'
+                  borderColor: '#0f33bb', 
+                  backgroundColor: '#0f33bb', 
+                  color: '#1abeff'
                 }}
                 required
               />
@@ -93,8 +93,8 @@ const Index = () => {
                 type="submit"
                 className="h-12 px-8 font-semibold rounded-xl transition-all duration-200 hover:scale-105"
                 style={{ 
-                  backgroundColor: '#ffb881', 
-                  color: '#016b1e'
+                  backgroundColor: '#0f33bb', 
+                  color: '#1abeff'
                 }}
               >
                 Get Started
@@ -106,7 +106,7 @@ const Index = () => {
         {/* Coming Soon Message with Typewriter Effect */}
         <div className="animate-fade-in-up delay-300">
           <div className="h-7 flex items-center justify-center">
-            <p className={`text-lg font-medium transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ color: '#ffb881' }}>
+            <p className={`text-lg font-medium transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ color: '#0f33bb' }}>
               {typewriterText}
             </p>
           </div>
