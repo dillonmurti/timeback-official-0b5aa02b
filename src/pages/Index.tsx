@@ -53,7 +53,7 @@ const Index = () => {
         {/* Logo */}
         <div className="animate-fade-in">
           <img 
-            src="/lovable-uploads/d722f291-dbe0-42a7-ba74-c277f8db9114.png" 
+            src="/lovable-uploads/5914131b-3128-49af-af97-d359cb8d0d5f.png" 
             alt="Timeback - Learning just got schooled"
             className="mx-auto w-48 h-auto"
             style={{ opacity: 0.95 }}
