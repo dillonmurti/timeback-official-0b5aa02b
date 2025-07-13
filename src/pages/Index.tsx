@@ -1,13 +1,21 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
+
+// Email validation schema
+const emailSchema = z.object({
+  email: z.string().email("Please enter a valid email address").min(1, "Email is required"),
+});
 
 const Index = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [typewriterText, setTypewriterText] = useState("");
   const [isVisible, setIsVisible] = useState(true);
+  const [lastSubmissionTime, setLastSubmissionTime] = useState(0);
   const fullText = "COMING IN 2026";
 
   useEffect(() => {
@@ -36,14 +44,80 @@ const Index = () => {
     return () => clearInterval(typewriterInterval);
   }, []);
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    
+    // Rate limiting: prevent submissions within 2 seconds
+    const now = Date.now();
+    if (now - lastSubmissionTime < 2000) {
+      toast({
+        title: "Please wait",
+        description: "Please wait a moment before submitting again.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Validate email
+    const validation = emailSchema.safeParse({ email });
+    if (!validation.success) {
+      toast({
+        title: "Invalid email",
+        description: validation.error.errors[0].message,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setLastSubmissionTime(now);
+
+    try {
+      // Check if email already exists
+      const { data: existingEmail, error: checkError } = await supabase
+        .from('email_signups')
+        .select('email')
+        .eq('email', email.toLowerCase())
+        .maybeSingle();
+
+      if (checkError) {
+        console.error('Error checking existing email:', checkError);
+        throw new Error('Failed to verify email');
+      }
+
+      if (existingEmail) {
+        toast({
+          title: "Already registered!",
+          description: "This email is already on our waitlist. We'll notify you when Timeback launches!",
+        });
+        setEmail("");
+        return;
+      }
+
+      // Insert new email signup
+      const { error: insertError } = await supabase
+        .from('email_signups')
+        .insert([{ email: email.toLowerCase() }]);
+
+      if (insertError) {
+        console.error('Error inserting email:', insertError);
+        throw new Error('Failed to save email');
+      }
+
       toast({
         title: "Thanks for signing up!",
         description: "We'll notify you when Timeback launches in 2026.",
       });
       setEmail("");
+    } catch (error) {
+      console.error('Email submission error:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later or contact support if the problem persists.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -81,23 +155,25 @@ const Index = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 h-12 text-lg border-2 rounded-xl placeholder-[#1abeff]"
+                className="flex-1 h-12 text-lg border-2 rounded-xl"
                 style={{ 
                   borderColor: '#0f33bb', 
                   backgroundColor: '#0f33bb', 
                   color: '#1abeff'
                 }}
+                disabled={isSubmitting}
                 required
               />
               <Button 
                 type="submit"
-                className="h-12 px-8 font-semibold rounded-xl transition-all duration-200 hover:scale-105"
+                className="h-12 px-8 font-semibold rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{ 
                   backgroundColor: '#0f33bb', 
                   color: '#1abeff'
                 }}
+                disabled={isSubmitting}
               >
-                Get Started
+                {isSubmitting ? "..." : "Get Started"}
               </Button>
             </div>
           </form>
