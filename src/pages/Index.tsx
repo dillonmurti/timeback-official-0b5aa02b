@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { Link } from "react-router-dom";
 import { z } from "zod";
 
 // Email validation schema
@@ -123,6 +124,26 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4" style={{ backgroundColor: '#1abeff' }}>
+      {/* Navigation */}
+      <nav className="fixed top-4 right-4 z-10">
+        <div className="flex gap-4">
+          <Link 
+            to="/" 
+            className="text-lg font-medium hover:underline"
+            style={{ color: '#0f33bb' }}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/about" 
+            className="text-lg font-medium hover:underline"
+            style={{ color: '#0f33bb' }}
+          >
+            About
+          </Link>
+        </div>
+      </nav>
+
       <div className="max-w-4xl mx-auto text-center space-y-12">
         {/* Logo */}
         <div className="animate-fade-in">
