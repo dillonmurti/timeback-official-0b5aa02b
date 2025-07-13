@@ -31,7 +31,15 @@ const About = () => {
         
         <div className="space-y-6 text-lg" style={{ color: '#0f33bb' }}>
           <p>
-            TimeBack is the AI-powered EducationOS behind Alpha schools, empowering kids to master their academics in just 2 hours a day—freeing up the rest of the day for what they love. Built on learning science, it generates personalized lessons, optimal lesson plans, and AI coaching to create self-driven learners. Independent standardized tests confirm learning gains up to 10× faster.
+            TimeBack is the AI-powered EducationOS behind <a 
+              href="https://alpha.school" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="font-bold hover:underline"
+              style={{ color: '#0f33bb' }}
+            >
+              Alpha
+            </a> schools, empowering kids to master their academics in just 2 hours a day—freeing up the rest of the day for what they love. Built on learning science, it generates personalized lessons, optimal lesson plans, and AI coaching to create self-driven learners. Independent standardized tests confirm learning gains up to 10× faster.
           </p>
         </div>
       </div>
