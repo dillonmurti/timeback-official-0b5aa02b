@@ -35,7 +35,7 @@ const About = () => {
               href="https://alpha.school" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="font-bold hover:underline"
+              className="font-bold underline hover:underline"
               style={{ color: '#0f33bb' }}
             >
               Alpha
