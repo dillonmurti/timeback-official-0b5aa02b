@@ -25,11 +25,11 @@ const About = () => {
       </nav>
 
       <div className="max-w-4xl mx-auto text-center space-y-8">
-        <h1 className="text-4xl md:text-5xl font-bold font-satoshi leading-tight" style={{ color: '#0f33bb' }}>
+        <h1 className="text-4xl md:text-5xl font-bold font-satoshi leading-tight animate-fade-in" style={{ color: '#0f33bb' }}>
           About TimeBack
         </h1>
         
-        <div className="space-y-6 text-lg" style={{ color: '#0f33bb' }}>
+        <div className="space-y-6 text-lg animate-fade-in-up delay-200" style={{ color: '#0f33bb' }}>
           <p>
             TimeBack is the AI-powered EducationOS behind <a 
               href="https://alpha.school" 
