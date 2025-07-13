@@ -21,7 +21,7 @@ export default {
 		extend: {
       fontFamily: {
         'satoshi': ['Satoshi', 'sans-serif'],
-        'recoleta': ['Recoleta', 'serif'],
+        'crimson': ['Crimson Pro', 'serif'],
       },
 			colors: {
 				border: 'hsl(var(--border))',
