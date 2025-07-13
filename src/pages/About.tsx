@@ -9,14 +9,14 @@ const About = () => {
         <div className="flex gap-4">
           <Link 
             to="/" 
-            className="text-lg font-medium hover:underline"
+            className="text-lg font-medium hover:underline font-cal"
             style={{ color: '#0f33bb' }}
           >
             Home
           </Link>
           <Link 
             to="/about" 
-            className="text-lg font-medium hover:underline"
+            className="text-lg font-medium hover:underline font-cal"
             style={{ color: '#0f33bb' }}
           >
             About
@@ -32,7 +32,7 @@ const About = () => {
           <img 
             src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
             alt="TimeBack" 
-            className="h-12 md:h-14"
+            className="h-11 md:h-13"
           />
         </div>
         

@@ -129,14 +129,14 @@ const Index = () => {
         <div className="flex gap-4">
           <Link 
             to="/" 
-            className="text-lg font-medium hover:underline"
+            className="text-lg font-medium hover:underline font-cal"
             style={{ color: '#0f33bb' }}
           >
             Home
           </Link>
           <Link 
             to="/about" 
-            className="text-lg font-medium hover:underline"
+            className="text-lg font-medium hover:underline font-cal"
             style={{ color: '#0f33bb' }}
           >
             About
@@ -176,7 +176,7 @@ const Index = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 h-12 text-lg border-2 rounded-xl placeholder:text-[#1abeff]"
+                className="flex-1 h-12 text-lg border-2 rounded-xl placeholder:text-[#1abeff] font-cal"
                 style={{ 
                   borderColor: '#0f33bb', 
                   backgroundColor: '#0f33bb', 
@@ -187,7 +187,7 @@ const Index = () => {
               />
               <Button 
                 type="submit"
-                className="h-12 px-8 font-semibold rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="h-12 px-8 font-semibold rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed font-cal"
                 style={{ 
                   backgroundColor: '#0f33bb', 
                   color: '#1abeff'
@@ -203,7 +203,7 @@ const Index = () => {
         {/* Coming Soon Message with Typewriter Effect */}
         <div className="animate-fade-in-up delay-300">
           <div className="h-7 flex items-center justify-center">
-            <p className={`text-lg font-medium transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ color: '#0f33bb' }}>
+            <p className={`text-lg font-medium transition-opacity duration-500 font-cal ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ color: '#0f33bb' }}>
               {typewriterText}
             </p>
           </div>
