@@ -129,7 +129,7 @@ const Index = () => {
           <img 
             src="/lovable-uploads/5914131b-3128-49af-af97-d359cb8d0d5f.png" 
             alt="Timeback - Learning just got schooled"
-            className="mx-auto w-48 h-auto"
+            className="mx-auto w-72 h-auto"
             style={{ opacity: 0.95 }}
           />
         </div>
