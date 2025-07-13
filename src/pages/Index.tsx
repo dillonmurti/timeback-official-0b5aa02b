@@ -136,7 +136,7 @@ const Index = () => {
 
         {/* Main Headline */}
         <div className="space-y-4 animate-fade-in-up">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight" style={{ color: '#0f33bb' }}>
+          <h1 className="text-4xl md:text-5xl font-bold font-satoshi leading-tight" style={{ color: '#0f33bb' }}>
             <div style={{ color: '#0f33bb' }}>
               Your kid can crush academics
             </div>
