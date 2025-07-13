@@ -26,7 +26,7 @@ const About = () => {
 
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <div className="flex items-start justify-center gap-4 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold font-satoshi leading-tight" style={{ color: '#0f33bb' }}>
+          <h1 className="text-4xl md:text-5xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
             About
           </h1>
           <img 
@@ -36,13 +36,13 @@ const About = () => {
           />
         </div>
         
-        <div className="space-y-6 text-lg animate-fade-in-up delay-200" style={{ color: '#0f33bb' }}>
+        <div className="space-y-6 text-lg animate-fade-in-up delay-200 font-cal" style={{ color: '#0f33bb' }}>
           <p>
             TimeBack is the AI-powered EducationOS behind <a 
               href="https://alpha.school" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="font-bold underline hover:underline"
+              className="font-bold underline hover:underline font-cal"
               style={{ color: '#0f33bb' }}
             >
               Alpha
