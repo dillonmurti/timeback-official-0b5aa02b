@@ -19,9 +19,10 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				'satoshi': ['Satoshi', 'sans-serif'],
-			},
+      fontFamily: {
+        'satoshi': ['Satoshi', 'sans-serif'],
+        'recoleta': ['Recoleta', 'serif'],
+      },
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
