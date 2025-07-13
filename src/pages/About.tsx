@@ -26,22 +26,12 @@ const About = () => {
 
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <h1 className="text-4xl md:text-5xl font-bold font-satoshi leading-tight" style={{ color: '#0f33bb' }}>
-          About Timeback
+          About TimeBack
         </h1>
         
         <div className="space-y-6 text-lg" style={{ color: '#0f33bb' }}>
           <p>
-            Timeback is revolutionizing education by helping kids achieve academic excellence 
-            in just 2 hours per day.
-          </p>
-          
-          <p>
-            Our innovative approach combines proven learning methodologies with modern technology 
-            to maximize learning efficiency and student engagement.
-          </p>
-          
-          <p>
-            Coming in 2026, Timeback will transform how children learn and succeed academically.
+            TimeBack is the AI-powered EducationOS behind Alpha schools, empowering kids to master their academics in just 2 hours a day—freeing up the rest of the day for what they love. Built on learning science, it generates personalized lessons, optimal lesson plans, and AI coaching to create self-driven learners. Independent standardized tests confirm learning gains up to 10× faster.
           </p>
         </div>
       </div>
