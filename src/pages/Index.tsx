@@ -176,7 +176,7 @@ const Index = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 h-12 text-lg border-2 rounded-xl"
+                className="flex-1 h-12 text-lg border-2 rounded-xl placeholder:text-[#1abeff]"
                 style={{ 
                   borderColor: '#0f33bb', 
                   backgroundColor: '#0f33bb', 
