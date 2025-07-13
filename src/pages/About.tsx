@@ -25,9 +25,16 @@ const About = () => {
       </nav>
 
       <div className="max-w-4xl mx-auto text-center space-y-8">
-        <h1 className="text-4xl md:text-5xl font-bold font-satoshi leading-tight animate-fade-in" style={{ color: '#0f33bb' }}>
-          About TimeBack
-        </h1>
+        <div className="flex items-center justify-center gap-4 animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold font-satoshi leading-tight" style={{ color: '#0f33bb' }}>
+            About
+          </h1>
+          <img 
+            src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
+            alt="TimeBack" 
+            className="h-12 md:h-16"
+          />
+        </div>
         
         <div className="space-y-6 text-lg animate-fade-in-up delay-200" style={{ color: '#0f33bb' }}>
           <p>
