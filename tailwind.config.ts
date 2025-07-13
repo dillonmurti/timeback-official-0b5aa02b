@@ -22,6 +22,7 @@ export default {
       fontFamily: {
         'satoshi': ['Satoshi', 'sans-serif'],
         'crimson': ['Crimson Pro', 'serif'],
+        'cal': ['Cal Sans', 'sans-serif'],
       },
 			colors: {
 				border: 'hsl(var(--border))',
