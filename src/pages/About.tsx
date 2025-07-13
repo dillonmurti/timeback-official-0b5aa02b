@@ -32,7 +32,8 @@ const About = () => {
           <img 
             src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
             alt="TimeBack" 
-            className="h-11 md:h-13 mt-1"
+            className="mt-1"
+            style={{ height: '46px' }}
           />
         </div>
         
