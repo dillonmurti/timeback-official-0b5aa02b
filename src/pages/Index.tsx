@@ -147,12 +147,12 @@ const Index = () => {
       <div className="max-w-4xl mx-auto text-center space-y-12">
         {/* Logo */}
         <div className="animate-fade-in">
-          <div className="w-72 h-auto mx-auto">
+          <div className="w-72 h-auto mx-auto" style={{ minHeight: '96px' }}>
             <img 
               src="/lovable-uploads/5914131b-3128-49af-af97-d359cb8d0d5f.png" 
               alt="Timeback - Learning just got schooled"
               className="w-full h-auto"
-              style={{ opacity: 0.95 }}
+              style={{ opacity: 0.95, display: 'block' }}
             />
           </div>
         </div>
