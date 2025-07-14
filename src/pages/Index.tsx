@@ -106,8 +106,8 @@ const Index = () => {
       }
 
       toast({
-        title: "Thanks for signing up!",
-        description: "We'll notify you when Timeback launches in 2026.",
+        title: "Thank you! We will be in contact when TimeBack launches in 2026.",
+        description: "",
       });
       setEmail("");
     } catch (error) {
