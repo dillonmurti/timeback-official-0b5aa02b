@@ -29,14 +29,11 @@ const About = () => {
           <h1 className="text-4xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
             About
           </h1>
-          <div className="relative">
-            <div style={{ width: '50.26px', height: '45.8px', visibility: 'hidden' }}></div>
-            <img 
-              src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
-              alt="TimeBack" 
-              className="h-[37.8px] mt-2 absolute top-0 left-0"
-            />
-          </div>
+          <img 
+            src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
+            alt="TimeBack" 
+            className="h-[37.8px] mt-2"
+          />
         </div>
         
         <div className="mt-8 text-lg animate-fade-in-up delay-200 font-cal" style={{ color: '#0f33bb' }}>
