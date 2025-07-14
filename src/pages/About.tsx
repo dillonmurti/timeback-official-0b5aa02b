@@ -29,7 +29,7 @@ const About = () => {
           <h1 className="text-4xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
             About
           </h1>
-          <div className="w-[37.8px] h-[37.8px] ml-4 mt-2 flex-shrink-0">
+          <div className="w-[37.8px] h-[37.8px] md:w-[50.26px] md:h-[50.26px] ml-4 mt-2 flex-shrink-0">
             <img 
               src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
               alt="TimeBack" 
