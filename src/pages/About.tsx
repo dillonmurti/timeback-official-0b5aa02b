@@ -33,6 +33,8 @@ const About = () => {
             src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
             alt="TimeBack" 
             className="h-[37.8px] mt-2"
+            width="50.26"
+            height="37.8"
           />
         </div>
         
