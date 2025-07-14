@@ -158,12 +158,13 @@ const Index = () => {
         {/* Main Headline */}
         <div className="space-y-4 animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
-            <div style={{ color: '#0f33bb' }}>
+            <span style={{ color: '#0f33bb' }}>
               Your kid can crush academics
-            </div>
-            <div className="mt-2" style={{ color: '#0f33bb' }}>
+            </span>
+            <br className="md:hidden" />
+            <span className="md:ml-2" style={{ color: '#0f33bb' }}>
               in only 2 hours per day
-            </div>
+            </span>
           </h1>
         </div>
 
