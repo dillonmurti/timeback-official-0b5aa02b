@@ -25,7 +25,7 @@ const About = () => {
       </nav>
 
       <div className="max-w-4xl mx-auto text-center space-y-8">
-        <div className="flex items-center md:items-start justify-center gap-4 animate-fade-in">
+        <div className="flex items-center md:items-start justify-center gap-2 md:gap-4 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
             About
           </h1>
