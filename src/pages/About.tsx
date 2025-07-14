@@ -32,8 +32,7 @@ const About = () => {
           <img 
             src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
             alt="TimeBack" 
-            className="mt-1"
-            style={{ height: '50.26px' }}
+            className="mt-1 h-[37.8px] md:h-[50.26px]"
           />
         </div>
         
