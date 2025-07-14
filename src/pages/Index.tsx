@@ -158,9 +158,19 @@ const Index = () => {
         {/* Main Headline */}
         <div className="space-y-4 animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
-            <div style={{ color: '#0f33bb' }}>
-              <span className="block sm:inline">Your kid can crush academics</span>
-              <span className="block sm:inline sm:ml-2">in only 2 hours per day</span>
+            {/* Mobile version - two lines */}
+            <div className="block md:hidden" style={{ color: '#0f33bb' }}>
+              <div>Your kid can crush academics</div>
+              <div>in only 2 hours per day</div>
+            </div>
+            {/* Desktop/Tablet version - keep original structure */}
+            <div className="hidden md:block" style={{ color: '#0f33bb' }}>
+              <div style={{ color: '#0f33bb' }}>
+                Your kid can crush academics
+              </div>
+              <div className="mt-2" style={{ color: '#0f33bb' }}>
+                in only 2 hours per day
+              </div>
             </div>
           </h1>
         </div>
