@@ -189,7 +189,7 @@ const Index = () => {
                 type="submit"
                 className="h-12 px-8 font-semibold rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed font-cal"
                 style={{ 
-                  backgroundColor: '#fbe7d4', 
+                  backgroundColor: '#ffffff', 
                   color: '#0f33bb'
                 }}
                 disabled={isSubmitting}
