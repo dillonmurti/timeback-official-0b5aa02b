@@ -25,16 +25,16 @@ const About = () => {
       </nav>
 
       <div className="max-w-4xl mx-auto text-center">
-        <div className="flex items-center justify-center gap-4 animate-fade-in">
+        <div className="flex items-center justify-center gap-4 animate-fade-in" style={{ minHeight: '54px' }}>
           <h1 className="text-4xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
             About
           </h1>
-          <div className="flex items-end" style={{ minWidth: '50.26px', minHeight: '45.8px' }}>
+          <div style={{ width: '50.26px', height: '45.8px', display: 'flex', alignItems: 'flex-end' }}>
             <img 
               src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
               alt="TimeBack" 
-              className="h-[37.8px] mt-2"
-              style={{ display: 'block' }}
+              className="h-[37.8px]"
+              style={{ display: 'block', marginTop: '8px' }}
             />
           </div>
         </div>
