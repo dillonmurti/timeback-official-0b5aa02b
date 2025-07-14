@@ -32,7 +32,7 @@ const About = () => {
           <img 
             src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
             alt="TimeBack" 
-            className="h-[37.8px] md:h-[50.26px] md:mt-1"
+            className="h-[37.8px] md:h-[50.26px] md:mt-1 self-center md:self-start"
           />
         </div>
         
