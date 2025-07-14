@@ -126,10 +126,10 @@ const Index = () => {
     <div className="min-h-screen flex flex-col items-center justify-center px-4" style={{ backgroundColor: '#1abeff' }}>
       {/* Navigation */}
       <nav className="fixed top-4 right-4 z-10">
-        <div className="flex">
+        <div className="flex gap-4">
           <Link 
             to="/" 
-            className="text-lg font-medium hover:underline font-cal mr-4"
+            className="text-lg font-medium hover:underline font-cal"
             style={{ color: '#0f33bb' }}
           >
             Home
@@ -144,19 +144,21 @@ const Index = () => {
         </div>
       </nav>
 
-      <div className="max-w-4xl mx-auto text-center relative">
+      <div className="max-w-4xl mx-auto text-center space-y-12">
         {/* Logo */}
         <div className="animate-fade-in">
-          <img 
-            src="/lovable-uploads/5914131b-3128-49af-af97-d359cb8d0d5f.png" 
-            alt="Timeback - Learning just got schooled"
-            className="mx-auto w-72 h-auto"
-            style={{ opacity: 0.95 }}
-          />
+          <div className="w-72 h-auto mx-auto">
+            <img 
+              src="/lovable-uploads/5914131b-3128-49af-af97-d359cb8d0d5f.png" 
+              alt="Timeback - Learning just got schooled"
+              className="w-full h-auto"
+              style={{ opacity: 0.95 }}
+            />
+          </div>
         </div>
 
         {/* Main Headline */}
-        <div className="absolute top-80 left-0 right-0 animate-fade-in-up">
+        <div className="space-y-4 animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
             {/* Mobile version - two lines */}
             <div className="block md:hidden text-2xl" style={{ color: '#0f33bb' }}>
@@ -168,7 +170,7 @@ const Index = () => {
               <div style={{ color: '#0f33bb' }}>
                 Your kid can crush academics
               </div>
-              <div className="absolute top-12 left-0 right-0" style={{ color: '#0f33bb' }}>
+              <div className="mt-2" style={{ color: '#0f33bb' }}>
                 in only 2 hours per day
               </div>
             </div>
@@ -176,15 +178,15 @@ const Index = () => {
         </div>
 
         {/* Email Signup */}
-        <div className="absolute top-96 left-1/2 transform -translate-x-1/2 w-full max-w-md animate-fade-in-up delay-200" style={{ top: '28rem' }}>
-          <form onSubmit={handleEmailSubmit}>
-            <div className="flex">
+        <div className="max-w-md mx-auto animate-fade-in-up delay-200">
+          <form onSubmit={handleEmailSubmit} className="space-y-4">
+            <div className="flex gap-2">
               <Input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 h-12 text-lg border-2 rounded-xl placeholder:text-[#1abeff] font-cal mr-2"
+                className="flex-1 h-12 text-lg border-2 rounded-xl placeholder:text-[#1abeff] font-cal"
                 style={{ 
                   borderColor: '#0f33bb', 
                   backgroundColor: '#0f33bb', 
@@ -209,7 +211,7 @@ const Index = () => {
         </div>
 
         {/* Coming Soon Message with Typewriter Effect */}
-        <div className="absolute left-0 right-0 animate-fade-in-up delay-300" style={{ top: '32rem' }}>
+        <div className="animate-fade-in-up delay-300">
           <div className="h-7 flex items-center justify-center">
             <p className={`text-lg font-medium transition-opacity duration-500 font-cal ${isVisible ? 'opacity-100' : 'opacity-0'}`} style={{ color: '#0f33bb' }}>
               {typewriterText}
