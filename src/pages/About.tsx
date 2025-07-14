@@ -25,7 +25,7 @@ const About = () => {
       </nav>
 
       <div className="max-w-4xl mx-auto text-center">
-        <div className="flex items-center justify-center gap-4 animate-fade-in">
+        <div className="flex items-center justify-center gap-4 animate-fade-in" style={{ minHeight: '45.8px' }}>
           <h1 className="text-4xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
             About
           </h1>
