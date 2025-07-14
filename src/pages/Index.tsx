@@ -159,7 +159,7 @@ const Index = () => {
         <div className="space-y-4 animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
             {/* Mobile version - two lines */}
-            <div className="block md:hidden" style={{ color: '#0f33bb' }}>
+            <div className="block md:hidden text-2xl" style={{ color: '#0f33bb' }}>
               <div>Your kid can crush academics</div>
               <div>in only 2 hours per day</div>
             </div>
