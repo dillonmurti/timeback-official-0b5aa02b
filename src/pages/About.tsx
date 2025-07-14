@@ -24,19 +24,19 @@ const About = () => {
         </div>
       </nav>
 
-      <div className="max-w-4xl mx-auto text-center relative">
-        <div className="animate-fade-in">
-          <h1 className="text-4xl font-bold font-cal leading-tight inline-block" style={{ color: '#0f33bb' }}>
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="flex items-center justify-center gap-4 animate-fade-in">
+          <h1 className="text-4xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
             About
           </h1>
           <img 
             src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
             alt="TimeBack" 
-            className="h-[37.8px] mt-2 ml-4 inline-block"
+            className="h-[37.8px] mt-2"
           />
         </div>
         
-        <div className="absolute top-16 left-0 right-0 text-lg animate-fade-in-up delay-200 font-cal" style={{ color: '#0f33bb' }}>
+        <div className="mt-8 text-lg animate-fade-in-up delay-200 font-cal" style={{ color: '#0f33bb' }}>
           <p>
             TimeBack is the AI-powered EducationOS behind <a 
               href="https://alpha.school" 
