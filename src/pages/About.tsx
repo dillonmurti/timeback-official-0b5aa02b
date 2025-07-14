@@ -25,14 +25,14 @@ const About = () => {
       </nav>
 
       <div className="max-w-4xl mx-auto text-center space-y-8">
-        <div className="flex items-center md:items-start justify-center gap-3 md:gap-4 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold font-cal leading-tight" style={{ color: '#0f33bb' }}>
+        <div className="flex items-center md:items-start justify-center gap-3 md:gap-4 animate-fade-in min-w-fit">
+          <h1 className="text-4xl md:text-5xl font-bold font-cal leading-tight whitespace-nowrap" style={{ color: '#0f33bb' }}>
             About
           </h1>
           <img 
             src="/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png" 
             alt="TimeBack" 
-            className="h-[37.8px] md:h-[50.26px] w-[37.8px] md:w-[50.26px] mt-2 md:mt-1 self-center md:self-start"
+            className="h-[37.8px] md:h-[50.26px] mt-2 md:mt-1 self-center md:self-start flex-shrink-0"
           />
         </div>
         
