@@ -204,7 +204,7 @@ const Index = () => {
                 }}
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "..." : "Get Started"}
+                {isSubmitting ? "..." : "I'm Interested"}
               </Button>
             </div>
           </form>
