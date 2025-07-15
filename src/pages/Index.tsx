@@ -90,6 +90,7 @@ const Index = () => {
         toast({
           title: "Already registered!",
           description: "This email is already on our waitlist. We'll notify you when Timeback launches!",
+          className: "toast-custom-color",
         });
         setEmail("");
         return;
