@@ -105,6 +105,7 @@ All colors MUST be HSL.
 }
 
 /* Custom toast styling */
-.toast-custom-color .text-sm.font-semibold {
+.toast-custom-color .text-sm.font-semibold,
+.toast-custom-color .text-sm {
   color: #0f33bb !important;
 }
