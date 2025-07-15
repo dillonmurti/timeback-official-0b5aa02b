@@ -5,6 +5,7 @@ import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Link } from "react-router-dom";
 import { z } from "zod";
+import LoadingScreen from "@/components/LoadingScreen";
 
 // Email validation schema
 const emailSchema = z.object({
@@ -17,7 +18,42 @@ const Index = () => {
   const [typewriterText, setTypewriterText] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const [lastSubmissionTime, setLastSubmissionTime] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [logoLoaded, setLogoLoaded] = useState(false);
   const fullText = "COMING IN 2026";
+
+  // Logo preloading effect
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setLogoLoaded(true);
+    };
+    img.onerror = () => {
+      // If logo fails to load, still show the page after a timeout
+      console.warn('Logo failed to load');
+      setLogoLoaded(true);
+    };
+    img.src = "/lovable-uploads/5914131b-3128-49af-af97-d359cb8d0d5f.png";
+
+    // Ensure minimum loading time for smooth experience
+    const minimumLoadingTime = setTimeout(() => {
+      if (logoLoaded) {
+        setIsLoading(false);
+      }
+    }, 800);
+
+    return () => clearTimeout(minimumLoadingTime);
+  }, []);
+
+  // Hide loading screen once logo is loaded
+  useEffect(() => {
+    if (logoLoaded) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 300); // Small delay for smooth transition
+      return () => clearTimeout(timer);
+    }
+  }, [logoLoaded]);
 
   useEffect(() => {
     let currentIndex = 0;
@@ -125,9 +161,17 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4" style={{ backgroundColor: '#1abeff' }}>
-      {/* Navigation */}
-      <nav className="fixed top-4 right-4 z-10">
+    <>
+      <LoadingScreen isLoading={isLoading} />
+      
+      <div 
+        className={`min-h-screen flex flex-col items-center justify-center px-4 transition-opacity duration-500 ${
+          isLoading ? 'opacity-0' : 'opacity-100'
+        }`} 
+        style={{ backgroundColor: '#1abeff' }}
+      >
+        {/* Navigation */}
+        <nav className="fixed top-4 right-4 z-10">
         <div className="flex gap-4">
           <Link 
             to="/" 
@@ -227,7 +271,8 @@ const Index = () => {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
