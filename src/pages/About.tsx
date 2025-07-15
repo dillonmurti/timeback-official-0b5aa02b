@@ -1,9 +1,55 @@
 
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const About = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [logoLoaded, setLogoLoaded] = useState(false);
+
+  // Logo preloading effect
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setLogoLoaded(true);
+    };
+    img.onerror = () => {
+      // If logo fails to load, still show the page after a timeout
+      console.warn('Logo failed to load');
+      setLogoLoaded(true);
+    };
+    img.src = "/lovable-uploads/5faf787d-d6d8-4378-8afd-217044d5ccca.png";
+
+    // Ensure minimum loading time for smooth experience
+    const minimumLoadingTime = setTimeout(() => {
+      if (logoLoaded) {
+        setIsLoading(false);
+      }
+    }, 800);
+
+    return () => clearTimeout(minimumLoadingTime);
+  }, []);
+
+  // Hide loading screen once logo is loaded
+  useEffect(() => {
+    if (logoLoaded) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 300); // Small delay for smooth transition
+      return () => clearTimeout(timer);
+    }
+  }, [logoLoaded]);
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4" style={{ backgroundColor: '#1abeff' }}>
+    <>
+      <LoadingScreen isLoading={isLoading} />
+      
+      <div 
+        className={`min-h-screen flex flex-col items-center justify-center px-4 transition-opacity duration-500 ${
+          isLoading ? 'opacity-0' : 'opacity-100'
+        }`} 
+        style={{ backgroundColor: '#1abeff' }}
+      >
       {/* Navigation */}
       <nav className="fixed top-4 right-4 z-10">
         <div className="flex gap-4">
@@ -50,7 +96,8 @@ const About = () => {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
