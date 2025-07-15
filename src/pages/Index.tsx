@@ -243,14 +243,15 @@ const Index = () => {
               />
               <Button 
                 type="submit"
-                className="h-12 px-8 font-semibold rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed font-cal"
+                className="h-12 px-8 font-semibold rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed font-cal border-2"
                 style={{ 
-                  backgroundColor: '#ffffff', 
-                  color: '#0f33bb'
+                  backgroundColor: 'transparent', 
+                  color: '#0f33bb',
+                  borderColor: '#0f33bb'
                 }}
                 disabled={isSubmitting}
               >
-                {isSubmitting ? "..." : "I'm Interested"}
+                {isSubmitting ? "..." : "Join Waitlist"}
               </Button>
             </div>
           </form>
