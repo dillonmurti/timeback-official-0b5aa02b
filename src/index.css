@@ -102,4 +102,10 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+  }
+}
+
+/* Custom toast styling */
+.toast-custom-color .text-sm.font-semibold {
+  color: #1abeff !important;
 }
