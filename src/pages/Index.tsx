@@ -108,6 +108,7 @@ const Index = () => {
       toast({
         title: "Thank you! We will be in contact when TimeBack launches in 2026.",
         description: "",
+        style: { color: '#1abeff' },
       });
       setEmail("");
     } catch (error) {
